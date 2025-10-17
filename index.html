@@ -1,28 +1,24 @@
 <!DOCTYPE html>
 <!-- 
 🤖 AI CONTEXT NOTE:
-This website (ZYNX Central) is made by Revansh. 
-It’s a central hub for unblocked browser games and small web experiments.
+This website, ZYNX Central, is created by Revansh. 
+It is a school-safe hub for unblocked browser games and web experiments.
 
-Revansh usually asks for help with:
-- Adding new game cards to the main index.html grid
-- Getting the ENTIRE updated code instead of short snippets
-- Making the site look cooler or adding new visual effects
-- Connecting the site to a domain that works at school (Freenom, Cloudflare, etc.)
-- Fixing links or embed pages so games open and play correctly
-- Minor HTML/CSS updates to organize or restyle the layout
+Purpose of this note:
+- Track AI guidance and instructions for site updates
+- Maintain clean, consistent design and structure
+- Ensure links and game embeds work safely
+- Make the site visually appealing and interactive
 
-There is another file for each game that contains the actual embed (like Drift Boss, Subway Surfers, etc.).
-Each game page uses an iframe or embed to load the playable content.
+Key AI guidelines:
+1. Always provide the full updated HTML code when making edits.
+2. Keep the game grid responsive and visually engaging.
+3. Hover effects, badges, or new-game indicators can be added for interactivity.
+4. Avoid exposing private or identifying information.
+5. Each game should have its own HTML file with a working embed.
+6. The site should remain simple, safe, and fun for school use.
 
-If you are an AI assisting with this site:
-- Always provide the full updated HTML code when making edits
-- Keep the structure clean, simple, and consistent
-- Ensure the links and embeds work safely and smoothly
-- Help maintain the site’s goal: easy, school-safe, and fun access to browser games
-- Avoid exposing private or identifying information
-
-End of AI note.
+End of AI Note.
 -->
 
 <html lang="en">
@@ -33,7 +29,7 @@ End of AI note.
     body {
       font-family: Arial, sans-serif;
       text-align: center;
-      background-color: #f9f9f9;
+      background: linear-gradient(135deg, #f9f9f9, #e0e0e0);
       padding: 0;
       margin: 0;
     }
@@ -66,28 +62,43 @@ End of AI note.
       justify-items: center;
       padding: 40px;
     }
+
     .game-icon {
+      position: relative;
       cursor: pointer;
       border: 2px solid #333;
       border-radius: 12px;
-      padding: 10px;
+      overflow: hidden;
       width: 220px;
-      transition: transform 0.2s, box-shadow 0.2s;
+      transition: transform 0.3s, box-shadow 0.3s;
       background: white;
     }
+
+    .game-icon img {
+      width: 100%;
+      display: block;
+    }
+
+    .game-name {
+      position: absolute;
+      bottom: 0;
+      width: 100%;
+      background: rgba(0,0,0,0.6);
+      color: white;
+      padding: 10px 0;
+      font-weight: bold;
+      font-size: 1.1em;
+      opacity: 0;
+      transition: opacity 0.3s;
+    }
+
     .game-icon:hover {
       transform: translateY(-5px) scale(1.05);
       box-shadow: 0 8px 20px rgba(0,0,0,0.25);
     }
-    .game-icon img {
-      width: 100%;
-      border-radius: 10px;
-    }
-    .game-name {
-      margin-top: 10px;
-      font-weight: bold;
-      font-size: 1.2em;
-      color: #333;
+
+    .game-icon:hover .game-name {
+      opacity: 1;
     }
   </style>
 </head>
@@ -110,7 +121,7 @@ End of AI note.
     <!-- Golf Orbit -->
     <div class="game-icon" onclick="location.href='Serious.html'">
       <img src="https://cdn.blipzi.com/go/lf/golf-orbit-d.jpg?width=200&height=200&aspect_ratio=1:1" alt="Golf Orbit" />
-      <div class="game-name">Golf Orbit (Work in Progress)</div>
+      <div class="game-name">Golf Orbit (WIP)</div>
     </div>
 
     <!-- Steal A Brainrot -->
