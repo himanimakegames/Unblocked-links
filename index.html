@@ -177,51 +177,6 @@
 
   <h1>ZYNX Central🤫🧏☠💀</h1>
   <p id="welcome-message"></p>
-<!-- Weather Checker (under welcome message) -->
-<div style="margin: 20px 0; text-align:center;">
-  <h2>Check the Weather 🌤️</h2>
-  <input type="text" id="city-input" placeholder="Enter city name" 
-         style="padding: 8px 12px; font-size: 1em; border-radius: 6px; border: 2px solid #333;">
-  <button id="get-weather" 
-          style="padding: 8px 12px; font-size: 1em; border-radius: 6px; border:none; background:#00ccff; color:white; cursor:pointer;">Get Weather</button>
-  
-  <div id="weather-result" style="margin-top: 20px; font-size: 1.2em; color:#00ccff;"></div>
-</div>
-
-<script>
-const apiKey = "a222ad041f497aea29e6635c96001425";
-
-document.getElementById("get-weather").addEventListener("click", () => {
-  const city = document.getElementById("city-input").value.trim();
-  const resultDiv = document.getElementById("weather-result");
-  
-  if(!city) {
-    resultDiv.innerHTML = "Please enter a city!";
-    return;
-  }
-
-  fetch(`https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`)
-    .then(response => response.json())
-    .then(data => {
-      if(data.cod !== 200) {
-        resultDiv.innerHTML = "City not found!";
-        return;
-      }
-      const temp = data.main.temp;
-      const desc = data.weather[0].description;
-      const icon = `https://openweathermap.org/img/wn/${data.weather[0].icon}@2x.png`;
-      resultDiv.innerHTML = `
-        <strong>${city}</strong><br>
-        <img src="${icon}" alt="weather icon"><br>
-        ${temp}°C, ${desc}
-      `;
-    })
-    .catch(err => {
-      console.error(err);
-      resultDiv.innerHTML = "Error fetching weather.";
-    });
-});
-</script>
 
  
   <!-- Switch Button -->
