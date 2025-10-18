@@ -167,6 +167,25 @@
       50% { transform: scale(1.1); }
     }
 
+    /* Welcome message */
+    #welcome-message {
+      font-size: 1.2em;
+      font-weight: bold;
+      margin-top: 10px;
+      color: #00ccff;
+      opacity: 0;
+      transition: opacity 2s;
+    }
+
+    /* Secret code input */
+    #bg-input {
+      margin-top: 15px; 
+      padding: 8px 12px; 
+      font-size: 1em; 
+      border-radius: 6px; 
+      border: 2px solid #333;
+    }
+
   </style>
 </head>
 <body class="rgb">
@@ -178,157 +197,68 @@
   </nav>
 
   <h1>ZYNX Central🤫🧏☠💀</h1>
- <p id="welcome-message"></p>
+  <p id="welcome-message"></p>
 
-<style>
-  #welcome-message {
-    font-size: 1.2em;
-    font-weight: bold;
-    margin-top: 10px;
-    color: #00ccff;           /* bright blue for contrast */
-    opacity: 0;               /* start invisible */
-    transition: opacity 2s;   /* smooth fade in */
-  }
-</style>
+  <!-- Secret code input -->
+  <input type="text" id="bg-input" placeholder="Type secret word🤫">
 
-<script>
-  const messages = [
-    "Player #13 Future Qb for cowboys 🏈",
-    "Ready to play some games? 🕹️",
-    "Can someone help me get a job?",
-    "New games added! Check them out! ✨",
-    "ZYNX Central is live! 🤫",
-    "I put a baby in a blender🤑🤑🤑",
-    " Syfm 💔"
-  ];
-
-  // Pick random message
-  const message = messages[Math.floor(Math.random() * messages.length)];
-
-  const msgEl = document.getElementById("welcome-message");
-  msgEl.textContent = message;
-
-  // Fade in
-  setTimeout(() => {
-    msgEl.style.opacity = 1;
-  }, 100);  // tiny delay so transition works
-</script>
-
-<!-- Input for secret/background -->
-<input type="text" id="bg-input" placeholder="Type secret word🤫" 
-       style="margin-top: 15px; padding: 8px 12px; font-size: 1em; border-radius: 6px; border: 2px solid #333;">
-
-<script>
-  const input = document.getElementById("bg-input");
-
-  input.addEventListener("input", () => {
-    const value = input.value.trim().toLowerCase();
-
-    if (value === "67") {
-      // Set background to repeating image
-      document.body.style.backgroundImage = "url('https://static.wikia.nocookie.net/joke-battles/images/3/3b/The_67_Kid.jpg/revision/latest/scale-to-width-down/340?cb=20250921130847')";
-      document.body.style.backgroundRepeat = "repeat";
-      document.body.style.backgroundSize = "100px 100px"; // adjust size of each image
-    } else {
-      // Reset background to default
-      document.body.style.backgroundImage = "";
-      document.body.style.background = "";
-    }
-  });
-</script>
-
-
-  
-  <!-- Switch Button -->
+  <!-- Switch Background Button -->
   <button id="bgSwitch">Switch Background</button>
 
+  <!-- Game Grid -->
   <div class="game-container">
-    <!-- Drift Boss -->
+    <!-- Example Game Icons -->
     <div class="game-icon" onclick="location.href='driftboss.html'">
       <img src="https://game-cdn.b3.fun/cdn-cgi/image/format=auto/drift-boss-538fa894-019a-4bb6-ba61-2c343374e3ea/portrait-c85or9.png" alt="Drift Boss" />
       <div class="game-name">Drift Boss</div>
     </div>
-
-    <!-- Golf Orbit -->
     <div class="game-icon" onclick="location.href='Serious.html'">
       <img src="https://cdn.blipzi.com/go/lf/golf-orbit-d.jpg?width=200&height=200&aspect_ratio=1:1" alt="Golf Orbit" />
       <div class="game-name">Golf Orbit (WIP)</div>
     </div>
-
-    <!-- Steal A Brainrot -->
-    <div class="game-icon steal" onclick="location.href='Sab.html'">
-      <img src="https://play-lh.googleusercontent.com/iR1JNfTr0W_fDN8zAfuZYPYHdVjI1UzNSVFkbAyXwN8e3jEuKsyu73zqjVdHDxNEfQqLhC78EaPzZPtWNL-X" alt="Steal A Brainrot Logo" />
-      <div class="game-name">Steal A Brainrot</div>
-    </div>
-
-    <!-- Steal A Brainrot (Online) NEW -->
-    <div class="game-icon" onclick="location.href='sabol.html'">
-      <div class="new-badge">NEW</div>
-      <img src="https://imgs.crazygames.com/steal-brainrot-online_16x9/20250916042622/steal-brainrot-online_16x9-cover?metadata=none&quality=100&width=1200&height=630&fit=crop" alt="Steal A Brainrot Online Logo" />
-      <div class="game-name">Steal A Brainrot (Online)</div>
-    </div>
-
-    <!-- Five Nights At Freddys -->
-    <div class="game-icon" onclick="location.href='Freddy.html'">
-      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRiuy1FC9UsLNL9ZbxseYTTOnQlhjM6x2inlQ&s" alt="Five Nights At Freddys Logo" />
-      <div class="game-name">Five Nights At Freddys</div>
-    </div>
-
-    <!-- Superhot -->
-    <div class="game-icon" onclick="location.href='superhot.html'">
-      <img src="https://m.media-amazon.com/images/M/MV5BYzk1NjM5MjktN2YzMC00YzcyLWFjNTEtM2IzNDE3NmIxZGQ4XkEyXkFqcGc@._V1_FMjpg_UX1000_.jpg" alt="Superhot Logo" />
-      <div class="game-name">Superhot</div>
-    </div>
-
-    <!-- Retro Bowl -->
-    <div class="game-icon" onclick="location.href='retro.html'">
-      <img src="https://pbs.twimg.com/profile_images/1217942835527409665/swRMqEkK_400x400.jpg" alt="Retro Bowl Logo" />
-      <div class="game-name">Retro Bowl</div>
-    </div>
-
-    <!-- Real Flight Sim -->
-    <div class="game-icon" onclick="location.href='aeroplane.html'">
-      <img src="https://www.rortos.com/wp-content/uploads/2020/01/RFS_512-300x300.png" alt="Real Flight Sim Logo" />
-      <div class="game-name">Real Flight Sim</div>
-    </div>
-
-    <!-- OvO NEW -->
-    <div class="game-icon" onclick="location.href='ovo.html'">
-      <div class="new-badge">NEW</div>
-      <img src="http://www.coolmathgames.com/sites/default/files/OvO_OG-logo.jpg" alt="OvO Game Logo" />
-      <div class="game-name">OvO</div>
-    </div>
-
-    <!-- QWOP NEW -->
-    <div class="game-icon" onclick="location.href='Qwop.html'">
-      <div class="new-badge">NEW</div>
-      <img src="https://assets-prd.ignimgs.com/2024/03/15/qwop-1710471104044.jpg" alt="QWOP Logo" />
-      <div class="game-name">QWOP</div>
-    </div>
-    
- <!-- Football Bros NEW -->
-<div class="game-icon" onclick="location.href='football.html'">
-  <div class="new-badge">NEW</div>
-  <img src="https://images.igdb.com/igdb/image/upload/t_cover_big/co951q.webp" alt="Football Bros Logo" />
-  <div class="game-name">Football Bros</div>
-</div>
-
-
-
-    <!-- Polytrack NEW -->
-    <div class="game-icon" onclick="location.href='Polytrack.html'">
-      <div class="new-badge">NEW</div>
-      <img src="https://1games.io/data/image/game/polytrack/banner/poly-track.png" alt="PolyTrack Logo" />
-      <div class="game-name">PolyTrack</div>
-    </div>
-
   </div>
 
   <script>
+    // Welcome message random
+    const messages = [
+      "Player #13 Future Qb for cowboys 🏈",
+      "Ready to play some games? 🕹️",
+      "Can someone help me get a job?",
+      "New games added! Check them out! ✨",
+      "ZYNX Central is live! 🤫",
+      "I put a baby in a blender🤑🤑🤑",
+      " Syfm 💔"
+    ];
+    const msgEl = document.getElementById("welcome-message");
+    msgEl.textContent = messages[Math.floor(Math.random() * messages.length)];
+    setTimeout(() => { msgEl.style.opacity = 1; }, 100);
+
+    // Secret code background
+    const input = document.getElementById("bg-input");
+    input.addEventListener("input", () => {
+      const value = input.value.trim().toLowerCase();
+
+      if (value === "67") {
+        document.body.classList.remove('rgb', 'gradient');
+        document.body.style.backgroundImage = "url('https://static.wikia.nocookie.net/joke-battles/images/3/3b/The_67_Kid.jpg/revision/latest/scale-to-width-down/340?cb=20250921130847')";
+        document.body.style.backgroundRepeat = "repeat";
+        document.body.style.backgroundSize = "100px 100px";
+      } else {
+        document.body.style.backgroundImage = "";
+        if (!document.body.classList.contains('rgb') && !document.body.classList.contains('gradient')) {
+          document.body.classList.add('rgb'); // default
+        }
+      }
+    });
+
+    // Switch background button
     const switchBtn = document.getElementById('bgSwitch');
     switchBtn.addEventListener('click', () => {
-      document.body.classList.toggle('rgb');
-      document.body.classList.toggle('gradient');
+      // only toggle if not showing secret background
+      if (input.value.trim().toLowerCase() !== "67") {
+        document.body.classList.toggle('rgb');
+        document.body.classList.toggle('gradient');
+      }
     });
   </script>
 
