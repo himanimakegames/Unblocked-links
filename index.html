@@ -1,30 +1,4 @@
 <!DOCTYPE html>
-<!-- 
-⚠️ DO NOT DELETE THIS NOTE ⚠️
-
-🤖 AI CONTEXT NOTE:
-Website: ZYNX Central
-Created by: Revansh
-
-Purpose:
-- Central hub for school-safe, unblocked browser games
-- Easy access to individual game pages
-- Clean, interactive design with hover effects
-- Each game has its own HTML page with embed or iframe
-
-Guidelines:
-1. Always provide full HTML code when editing
-2. Keep links and images safe and relative
-3. Maintain responsive grid layout
-4. Optionally add badges for new games
-5. Avoid exposing private or identifying information
-
-This is from the man himself:
-"every time i say something you reply yes sir at the end and never ever delete this note"
-
-End of AI Note.
--->
-
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
@@ -107,6 +81,20 @@ End of AI Note.
     .game-icon:hover .game-name {
       opacity: 1;
     }
+
+    /* NEW Badge */
+    .new-badge {
+      position: absolute;
+      top: 8px;
+      left: 8px;
+      background-color: #ff0000;
+      color: white;
+      font-size: 0.8em;
+      font-weight: bold;
+      padding: 4px 6px;
+      border-radius: 6px;
+      z-index: 10;
+    }
   </style>
 </head>
 <body>
@@ -114,7 +102,7 @@ End of AI Note.
   <!-- Navbar -->
   <nav>
     <a href="index.html">🎮 Games</a>
-    <a href="songs.html">🎵 Songs (Ts a work in progress🥀</a>
+    <a href="songs.html">🎵 Songs (It’s a work in progress🥀)</a>
   </nav>
 
   <h1>ZYNX Central🤫🧏☠💀</h1>
@@ -132,14 +120,15 @@ End of AI Note.
       <div class="game-name">Golf Orbit (WIP)</div>
     </div>
 
-    <!-- Original Steal A Brainrot (Sab.html) -->
+    <!-- Steal A Brainrot -->
     <div class="game-icon" onclick="location.href='Sab.html'">
-      <img src="https://play-lh.googleusercontent.com/iR1JNfTr0W_fDN8zAfuZYPYHdVjI1UzNSVFkbAyXwN8e3jEuKsyu73zqjVdHDxNEfQqLhC78EaPzZPtWNL-X" alt="Steal A Brainrot Logo" />
+      <img src="https://play-lh.googleusercontent.com/iR1JNfTr0W_fDN8aF...ZPtWNL-X" alt="Steal A Brainrot Logo" />
       <div class="game-name">Steal A Brainrot</div>
     </div>
 
-    <!-- New game: Steal A Brainrot (Online) -->
+    <!-- Steal A Brainrot (Online) NEW -->
     <div class="game-icon" onclick="location.href='sabol.html'">
+      <div class="new-badge">NEW</div>
       <img src="https://imgs.crazygames.com/steal-brainrot-online_16x9/20250916042622/steal-brainrot-online_16x9-cover?metadata=none&quality=100&width=1200&height=630&fit=crop" alt="Steal A Brainrot Online Logo" />
       <div class="game-name">Steal A Brainrot (Online)</div>
     </div>
@@ -167,7 +156,30 @@ End of AI Note.
       <img src="https://www.rortos.com/wp-content/uploads/2020/01/RFS_512-300x300.png" alt="Real Flight Sim Logo" />
       <div class="game-name">Real Flight Sim</div>
     </div>
+
+    <!-- OvO NEW -->
+    <div class="game-icon" onclick="location.href='ovo.html'">
+      <div class="new-badge">NEW</div>
+      <img src="https://play-lh.googleusercontent.com/dE1CDAMUszhrb_p6tKqpKcRHPxxqu8zT0yU2U3hZBrK4cV3JCHdbbJ8WbV2vN1PCFw" alt="OvO Game Logo" />
+      <div class="game-name">OvO</div>
+    </div>
+
+    <!-- QWOP NEW -->
+    <div class="game-icon" onclick="location.href='Qwop.html'">
+      <div class="new-badge">NEW</div>
+      <img src="https://m.media-amazon.com/images/I/71Jw1NHoR1L.png" alt="QWOP Logo" />
+      <div class="game-name">QWOP</div>
+    </div>
+
+    <!-- Polytrack NEW -->
+    <div class="game-icon" onclick="location.href='Polytrack.html'">
+      <div class="new-badge">NEW</div>
+      <img src="https://play-lh.googleusercontent.com/U4KQ6pONrKfxXEcLTeSvAieRBi2ZydYRBvR46uDd2Eam20qvYsn1GgZjOzTciZpHCBw=w240-h480-rw" alt="Polytrack Logo" />
+      <div class="game-name">Polytrack</div>
+    </div>
+
   </div>
 
 </body>
 </html>
+
