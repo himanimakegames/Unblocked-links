@@ -4,17 +4,6 @@
   <meta charset="UTF-8" />
   <title>ZYNX Central🤫🧏☠💀</title>
   <style>
-    /* 
-    ⚠️ DO NOT DELETE THIS NOTE ⚠️
-    🤖 AI CONTEXT NOTE:
-    Website: ZYNX Central
-    Created by: Revansh
-    Purpose:
-    - Central hub for school-safe, unblocked browser games
-    - Easy access to individual game pages
-    - Clean, interactive design with hover effects
-    */
-
     body {
       font-family: Arial, sans-serif;
       text-align: center;
@@ -56,7 +45,7 @@
       position: relative;
       cursor: pointer;
       border: 2px solid #333;
-      border-radius: 50px; /* fully rounded */
+      border-radius: 20px; /* Increased border-radius */
       overflow: hidden;
       width: 220px;
       height: 220px;
@@ -69,8 +58,6 @@
       height: 100%;
       object-fit: cover;
       display: block;
-      border-radius: 50px; /* match container */
-      transition: transform 0.3s;
     }
 
     .game-name {
@@ -84,18 +71,11 @@
       font-size: 1em;
       opacity: 0;
       transition: opacity 0.3s;
-      border-bottom-left-radius: 50px;
-      border-bottom-right-radius: 50px;
     }
 
     .game-icon:hover {
       transform: translateY(-5px) scale(1.05);
       box-shadow: 0 8px 20px rgba(0,0,0,0.25);
-    }
-
-    /* Steal A Brainrot extra hover zoom */
-    .game-icon.steal:hover img {
-      transform: scale(1.08); /* slightly zoom on hover */
     }
 
     .game-icon:hover .game-name {
@@ -105,22 +85,15 @@
     /* NEW Badge */
     .new-badge {
       position: absolute;
-      top: 10px;
-      left: 10px;
+      top: 8px;
+      left: 8px;
       background-color: #ff0000;
       color: white;
-      font-size: 0.9em;
+      font-size: 0.8em;
       font-weight: bold;
-      padding: 6px 10px;
-      border-radius: 25px; /* fully rounded */
+      padding: 4px 6px;
+      border-radius: 6px;
       z-index: 10;
-      box-shadow: 0 3px 6px rgba(0,0,0,0.2);
-      animation: pulse 1.2s infinite;
-    }
-
-    @keyframes pulse {
-      0%, 100% { transform: scale(1); }
-      50% { transform: scale(1.1); }
     }
   </style>
 </head>
@@ -148,7 +121,7 @@
     </div>
 
     <!-- Steal A Brainrot -->
-    <div class="game-icon steal" onclick="location.href='Sab.html'">
+    <div class="game-icon" onclick="location.href='Sab.html'">
       <img src="https://play-lh.googleusercontent.com/iR1JNfTr0W_fDN8zAfuZYPYHdVjI1UzNSVFkbAyXwN8e3jEuKsyu73zqjVdHDxNEfQqLhC78EaPzZPtWNL-X" alt="Steal A Brainrot Logo" />
       <div class="game-name">Steal A Brainrot</div>
     </div>
@@ -194,7 +167,7 @@
     <!-- QWOP NEW -->
     <div class="game-icon" onclick="location.href='Qwop.html'">
       <div class="new-badge">NEW</div>
-      <img src="https://m.media-amazon.com/images/I/71Jw1NHoR1L.png" alt="QWOP Logo" />
+      <img src="https://assets-prd.ignimgs.com/2024/03/15/qwop-1710471104044.jpg" alt="QWOP Logo" />
       <div class="game-name">QWOP</div>
     </div>
 
