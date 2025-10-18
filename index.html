@@ -178,25 +178,43 @@
   </nav>
 
   <h1>ZYNX Central🤫🧏☠💀</h1>
- <p id="welcome-message" style="font-size: 1.2em; color: #ffcc00; margin-top: 10px;"></p>
+ <p id="welcome-message"></p>
+
+<style>
+  #welcome-message {
+    font-size: 1.2em;
+    font-weight: bold;
+    margin-top: 10px;
+    color: #00ccff;           /* bright blue for contrast */
+    opacity: 0;               /* start invisible */
+    transition: opacity 2s;   /* smooth fade in */
+  }
+</style>
 
 <script>
-  // Array of messages
   const messages = [
     "Player #13 Future Qb for cowboys 🏈",
     "Ready to play some games? 🕹️",
     "Can someone help me get a job?",
     "New games added! Check them out! ✨",
     "ZYNX Central is live! 🤫",
-    "I put a baby in a blender🤑🤑🤑"
+    "I put a baby in a blender🤑🤑🤑",
+    " Syfm 💔"
   ];
 
-  // Pick a random message each time the page loads
+  // Pick random message
   const message = messages[Math.floor(Math.random() * messages.length)];
 
-  // Show it under the title
-  document.getElementById("welcome-message").textContent = message;
+  const msgEl = document.getElementById("welcome-message");
+  msgEl.textContent = message;
+
+  // Fade in
+  setTimeout(() => {
+    msgEl.style.opacity = 1;
+  }, 100);  // tiny delay so transition works
 </script>
+
+  
   <!-- Switch Button -->
   <button id="bgSwitch">Switch Background</button>
 
