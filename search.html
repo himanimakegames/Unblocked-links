@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>ZYNX Search 🔍</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: linear-gradient(45deg, #222, #444);
+      background-size: 600% 600%;
+      animation: gradientShift 15s ease infinite;
+      text-align: center;
+      margin: 0;
+      padding: 0;
+      color: white;
+    }
+
+    @keyframes gradientShift {
+      0% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+      100% { background-position: 0% 50%; }
+    }
+
+    h1 {
+      margin-top: 2em;
+      text-shadow: 2px 2px 6px black;
+    }
+
+    form {
+      margin-top: 2em;
+    }
+
+    input {
+      padding: 12px;
+      border-radius: 10px;
+      border: none;
+      width: 300px;
+    }
+
+    button {
+      padding: 12px 18px;
+      border: none;
+      border-radius: 10px;
+      background: #FF6600;
+      color: white;
+      cursor: pointer;
+    }
+
+    footer {
+      position: fixed;
+      bottom: 0;
+      width: 100%;
+      background: rgba(0,0,0,0.7);
+      padding: 10px;
+      color: white;
+      font-size: 0.9em;
+    }
+  </style>
+</head>
+<body>
+  <h1>Search the Web 🔍</h1>
+
+  <form action="https://duckduckgo.com/" method="get" target="_blank">
+    <input type="text" name="q" placeholder="Search anything..." required />
+    <button type="submit">Search</button>
+  </form>
+
+  <footer>© 2025 ZYNX Central. All rights reserved.</footer>
+</body>
+</html>
